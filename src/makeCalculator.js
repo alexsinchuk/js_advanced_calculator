@@ -17,7 +17,7 @@ function makeCalculator() {
       calc.result *= x;
     },
     divide(x) {
-      calc.result /= x;
+      calc.result = x !== 0 ? (calc.result /= x) : (calc.result = 0);
     },
 
     operate(callback, num) {
